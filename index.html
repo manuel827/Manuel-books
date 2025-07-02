@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja de eBooks</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+
+    p.sub {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .ebook {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .ebook img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .ebook h2 {
+      color: #444;
+      margin-top: 15px;
+    }
+
+    .ebook p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #e91e63;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn-like,
+    .btn-buy {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-like {
+      background: #ffebee;
+      color: #e91e63;
+    }
+
+    .btn-like:hover {
+      background: #ffcdd2;
+    }
+
+    .btn-buy {
+      background: #e91e63;
+      color: white;
+      text-decoration: none;
+    }
+
+    .btn-buy:hover {
+      background: #d81b60;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 10px;
+      font-size: 14px;
+      color: #999;
+    }
+  </style>
+  <script>
+    function like(btn) {
+      let count = btn.querySelector("span");
+      count.textContent = parseInt(count.textContent) + 1;
+    }
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Descubra histórias que tocam a alma</h1>
+    <p class="sub">Escolha o eBook que mais combina com você ou leve todos!</p>
+
+    <!-- EBOOK 1 -->
+    <div class="ebook">
+      <img src="capa1.jpg" alt="Capa de A Vila">
+      <h2>1. A Vila</h2>
+      <p>Um conto envolvente sobre uma comunidade isolada e os segredos que ela guarda. Leitura emocionante, cheia de surpresas.</p>
+      <p class="price">R$ 19,90</p>
+      <div class="buttons">
+        <button class="btn-like" onclick="like(this)">❤️ <span>0</span></button>
+        <a href="#" class="btn-buy">Comprar na Hotmart</a>
+      </div>
+    </div>
+
+    <!-- EBOOK 2 -->
+    <div class="ebook">
+      <img src="capa2.jpg" alt="Capa de Beijos e Rosas">
+      <h2>2. Beijos e Rosas</h2>
+      <p>Uma história sobre amores impossíveis, flores que falam e o poder de recomeçar. Um romance juvenil tocante.</p>
+      <p class="price">R$ 19,90</p>
+      <div class="buttons">
+        <button class="btn-like" onclick="like(this)">❤️ <span>0</span></button>
+        <a href="#" class="btn-buy">Comprar na Hotmart</a>
+      </div>
+    </div>
+
+    <!-- EBOOK 3 -->
+    <div class="ebook">
+      <img src="capa3.jpg" alt="Capa de O Paraíso Perdido">
+      <h2>3. O Paraíso Perdido</h2>
+      <p>Depois da queda de um mundo perfeito, um grupo de jovens luta para encontrar sentido e esperança. Intenso e poético.</p>
+      <p class="price">R$ 19,90</p>
+      <div class="buttons">
+        <button class="btn-like" onclick="like(this)">❤️ <span>0</span></button>
+        <a href="#" class="btn-buy">Comprar na Hotmart</a>
+      </div>
+    </div>
+
+    <!-- EBOOK 4 -->
+    <div class="ebook">
+      <img src="capa4.jpg" alt="Capa de Lembrados ou Esquecidos">
+      <h2>4. Lembrados ou Esquecidos</h2>
+      <p>Memórias, identidade e escolhas difíceis. Este eBook convida o leitor a refletir sobre o que vale a pena lembrar.</p>
+      <p class="price">R$ 19,90</p>
+      <div class="buttons">
+        <button class="btn-like" onclick="like(this)">❤️ <span>0</span></button>
+        <a href="#" class="btn-buy">Comprar na Hotmart</a>
+      </div>
+    </div>
+
+    <footer>
+      Pagamento 100% seguro via Hotmart. <br> © 2025 Sua Marca
+    </footer>
+  </div>
+
+</body>
+</html>

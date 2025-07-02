@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Loja de eBooks</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Loja de eBooks - Manuel Books</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
     }
 
     .container {
@@ -22,7 +21,6 @@
     h1 {
       text-align: center;
       color: #e91e63;
-      margin-bottom: 10px;
     }
 
     p.sub {
@@ -32,11 +30,11 @@
     }
 
     .ebook {
-      background: white;
+      background: #fff;
       border-radius: 15px;
       padding: 20px;
       margin-bottom: 25px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .ebook img {
@@ -47,51 +45,30 @@
     }
 
     .ebook h2 {
-      color: #444;
       margin-top: 15px;
+      color: #444;
     }
 
     .ebook p {
-      color: #555;
       font-size: 16px;
+      color: #555;
     }
 
     .price {
+      font-size: 18px;
       font-weight: bold;
       color: #e91e63;
-      font-size: 18px;
-      margin: 10px 0;
-    }
-
-    .buttons {
-      display: flex;
-      gap: 10px;
       margin-top: 10px;
     }
 
-    .btn-like,
     .btn-buy {
-      padding: 10px 15px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn-like {
-      background: #ffebee;
-      color: #e91e63;
-    }
-
-    .btn-like:hover {
-      background: #ffcdd2;
-    }
-
-    .btn-buy {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
       background: #e91e63;
-      color: white;
+      color: #fff;
       text-decoration: none;
+      border-radius: 8px;
     }
 
     .btn-buy:hover {
@@ -100,76 +77,76 @@
 
     footer {
       text-align: center;
-      padding: 30px 10px;
+      margin-top: 40px;
       font-size: 14px;
       color: #999;
     }
-  </style>
-  <script>
-    function like(btn) {
-      let count = btn.querySelector("span");
-      count.textContent = parseInt(count.textContent) + 1;
+
+    .likebtn-wrapper {
+      margin-top: 10px;
     }
-  </script>
+  </style>
 </head>
 <body>
-
   <div class="container">
     <h1>Descubra histórias que tocam a alma</h1>
     <p class="sub">Escolha o eBook que mais combina com você ou leve todos!</p>
 
-    <!-- EBOOK 1 -->
+    <!-- Ebook 1 -->
     <div class="ebook">
-      <img src="capa1.jpg" alt="Capa de A Vila">
+      <img src="capa1.jpg" alt="Capa de A Vila" />
       <h2>1. A Vila</h2>
       <p>Um conto envolvente sobre uma comunidade isolada e os segredos que ela guarda. Leitura emocionante, cheia de surpresas.</p>
       <p class="price">R$ 19,90</p>
-      <div class="buttons">
-        <button class="btn-like" onclick="like(this)">❤️ <span>0</span></button>
-        <a href="#" class="btn-buy">Comprar na Hotmart</a>
-      </div>
+      <span class="likebtn-wrapper" data-theme="custom" data-identifier="a_vila" data-site_id="manuel_books_netlify"></span>
+      <a href="#" class="btn-buy">Comprar na Hotmart</a>
     </div>
 
-    <!-- EBOOK 2 -->
+    <!-- Ebook 2 -->
     <div class="ebook">
-      <img src="capa2.jpg" alt="Capa de Beijos e Rosas">
+      <img src="capa2.jpg" alt="Capa de Beijos e Rosas" />
       <h2>2. Beijos e Rosas</h2>
       <p>Uma história sobre amores impossíveis, flores que falam e o poder de recomeçar. Um romance juvenil tocante.</p>
       <p class="price">R$ 19,90</p>
-      <div class="buttons">
-        <button class="btn-like" onclick="like(this)">❤️ <span>0</span></button>
-        <a href="#" class="btn-buy">Comprar na Hotmart</a>
-      </div>
+      <span class="likebtn-wrapper" data-theme="custom" data-identifier="beijos_rosas" data-site_id="manuel_books_netlify"></span>
+      <a href="#" class="btn-buy">Comprar na Hotmart</a>
     </div>
 
-    <!-- EBOOK 3 -->
+    <!-- Ebook 3 -->
     <div class="ebook">
-      <img src="capa3.jpg" alt="Capa de O Paraíso Perdido">
+      <img src="capa3.jpg" alt="Capa de O Paraíso Perdido" />
       <h2>3. O Paraíso Perdido</h2>
       <p>Depois da queda de um mundo perfeito, um grupo de jovens luta para encontrar sentido e esperança. Intenso e poético.</p>
       <p class="price">R$ 19,90</p>
-      <div class="buttons">
-        <button class="btn-like" onclick="like(this)">❤️ <span>0</span></button>
-        <a href="#" class="btn-buy">Comprar na Hotmart</a>
-      </div>
+      <span class="likebtn-wrapper" data-theme="custom" data-identifier="paraiso_perdido" data-site_id="manuel_books_netlify"></span>
+      <a href="#" class="btn-buy">Comprar na Hotmart</a>
     </div>
 
-    <!-- EBOOK 4 -->
+    <!-- Ebook 4 -->
     <div class="ebook">
-      <img src="capa4.jpg" alt="Capa de Lembrados ou Esquecidos">
+      <img src="capa4.jpg" alt="Capa de Lembrados ou Esquecidos" />
       <h2>4. Lembrados ou Esquecidos</h2>
       <p>Memórias, identidade e escolhas difíceis. Este eBook convida o leitor a refletir sobre o que vale a pena lembrar.</p>
       <p class="price">R$ 19,90</p>
-      <div class="buttons">
-        <button class="btn-like" onclick="like(this)">❤️ <span>0</span></button>
-        <a href="#" class="btn-buy">Comprar na Hotmart</a>
-      </div>
+      <span class="likebtn-wrapper" data-theme="custom" data-identifier="lembrados_ou_esquecidos" data-site_id="manuel_books_netlify"></span>
+      <a href="#" class="btn-buy">Comprar na Hotmart</a>
     </div>
 
     <footer>
-      Pagamento 100% seguro via Hotmart. <br> © 2025 Sua Marca
+      Pagamento 100% seguro via Hotmart.<br />
+      © 2025 Manuel Books
     </footer>
   </div>
 
+  <!-- Script oficial do LikeBtn -->
+  <script>
+    (function(d, s, id) {
+      var js, ljs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//w.likebtn.com/js/w/widget.js";
+      ljs.parentNode.insertBefore(js, ljs);
+    })(document, "script", "likebtn-wjs");
+  </script>
 </body>
 </html>
